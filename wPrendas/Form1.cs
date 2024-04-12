@@ -33,6 +33,7 @@ namespace wPrendas
             cboMarca.Items.Add("Zara");
             cboMarca.Items.Add("Gucci");
 
+            //Agregar los encabezados al DataGridView
             dgvPrendas.Columns.Add("TipoRopa", "Tipo de Ropa");
             dgvPrendas.Columns[0].Width = 140;
             dgvPrendas.Columns.Add("Marca", "Marca");
@@ -51,7 +52,7 @@ namespace wPrendas
                 return;
             }
 
-            // Intentar convertir el precio a decimal
+            // Convertir el precio a decimal
             if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
             {
                 MessageBox.Show("Por favor, ingrese un precio válido.");
