@@ -13,7 +13,7 @@ namespace wPrendas
 {
     public partial class Form1 : Form
     {
-        private List<RegistroPrendas> prendas = new List<RegistroPrendas>();
+        private List<clsRegistroPrendas> prendas = new List<clsRegistroPrendas>();
 
         public Form1()
         {
@@ -32,6 +32,7 @@ namespace wPrendas
             cboMarca.Items.Add("Levi's");
             cboMarca.Items.Add("Zara");
             cboMarca.Items.Add("Gucci");
+            cboMarca.Items.Add("Dolce Gabbana");
 
             dgvPrendas.Columns.Add("TipoRopa", "Tipo de Ropa");
             dgvPrendas.Columns[0].Width = 140;
@@ -59,10 +60,10 @@ namespace wPrendas
             }
 
             // Usar el método Registrar para agregar la nueva prenda a la lista
-            RegistroPrendas.Registrar(prendas, cboTipoRopa.Text, cboMarca.Text, txtTalla.Text, precio);
+            clsRegistroPrendas.Registrar(prendas, cboTipoRopa.Text, cboMarca.Text, txtTalla.Text, precio);
 
             // Agregar los datos de la última prenda agregada a la lista al DataGridView
-            RegistroPrendas ultimaPrenda = prendas.Last();
+            clsRegistroPrendas ultimaPrenda = prendas.Last();
             dgvPrendas.Rows.Add(ultimaPrenda.TipoRopa, ultimaPrenda.Marca, ultimaPrenda.Talla, ultimaPrenda.Precio.ToString());
 
             // Limpiar los controles para un nuevo ingreso

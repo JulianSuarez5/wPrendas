@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace wPrendas
 {
-    public class RegistroPrendas
+    public class clsRegistroPrendas
     {
         public string TipoRopa { get; set; }
         public string Marca { get; set; }
         public string Talla { get; set; }
         public decimal Precio { get; set; }
 
-        public RegistroPrendas(string tipoRopa, string marca, string talla, decimal precio)
+        public clsRegistroPrendas(string tipoRopa, string marca, string talla, decimal precio)
         {
             TipoRopa = tipoRopa;
             Marca = marca;
@@ -22,9 +22,9 @@ namespace wPrendas
         }
 
         // Método para registrar una nueva prenda en una lista
-        public static void Registrar(List<RegistroPrendas> Prendas, string tipoRopa, string marca, string talla, decimal precio)
+        public static void Registrar(List<clsRegistroPrendas> Prendas, string tipoRopa, string marca, string talla, decimal precio)
         {
-            RegistroPrendas Prenda = new RegistroPrendas(tipoRopa, marca, talla, precio);
+            clsRegistroPrendas Prenda = new clsRegistroPrendas(tipoRopa, marca, talla, precio);
             Prendas.Add(Prenda);
         }
     }
