@@ -33,6 +33,7 @@ namespace wPrendas
             cboMarca.Items.Add("Zara");
             cboMarca.Items.Add("Gucci");
             cboMarca.Items.Add("Dolce Gabbana");
+            cboMarca.Items.Add("Calvin Klein");
 
             //Agregar los encabezados al DataGridView
             dgvPrendas.Columns.Add("TipoRopa", "Tipo de Ropa");
